@@ -306,7 +306,7 @@ const init = () => {
     life = 100;
     
     cptTime = 100;
-    intervalTime = setInterval(geTime, 1000);
+    intervalTime = setInterval(getTime, 1000);
     
     // phone
     btns = document.getElementsByClassName('btn');
@@ -347,7 +347,7 @@ const updateLost = () => document.getElementsByClassName('lost')[0].innerText = 
 const updateKill = () => document.getElementsByClassName('kill')[0].innerText = kill;
 const updateLife = () => document.getElementsByClassName('life')[0].innerText = life + "%";
 
-const geTime = () => {
+const getTime = () => {
     cptTime--;
     document.getElementsByClassName('time')[0].innerText = cptTime;
 };
@@ -461,7 +461,7 @@ const retry = () =>{
     speed = 0;
     speedX = 5;
     geTime();
-    intervalTime = setInterval(geTime, 1000);
+    intervalTime = setInterval(getTime, 1000);
     updateLost();
     updateKill();
     updateLife();
